@@ -1,0 +1,97 @@
+body { 
+  background-color: lightblue;
+  font-family: Arial, sans-serif;
+}
+
+#paisaje {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  border: 1px solid gray;
+  background: #00BFFF;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.objeto {
+  position: absolute;
+}
+
+#sol {
+  top: 45px;
+  right: 70px;
+  animation: rotate 10s linear infinite;
+}
+
+#nevado {
+  bottom: -17px;
+  left: -17px;
+}
+
+#nevado2 {
+  bottom: -17px;
+  right: -30px;
+}
+
+#bici {
+  bottom: -25px;
+  left: 350px;
+  z-index: 1;
+  animation: moveBike 5s linear infinite;
+}
+
+#arbol {
+  right: 80px;
+  bottom: -4px;
+  z-index: 2;
+}
+
+#nube {
+  top: 50px;
+  left: 0;
+  animation: moveCloud 8s linear infinite;
+}
+
+#input-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#text-input {
+  padding: 5px;
+  font-size: 16px;
+  width: 300px;
+}
+
+#char-count{
+  font-weight: bold;
+  color: red;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes moveBike {
+  0% { transform: translateX(-500px); }
+  100% { transform: translateX(500px); }
+}
+
+@keyframes moveCloud {
+  0% { transform: translateX(-100px); }
+  100% { transform: translateX(900px); }
+}
+
+@keyframes spinBike {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#bici.spin {
+  animation: spinBike 1s ease-in-out;
+}
