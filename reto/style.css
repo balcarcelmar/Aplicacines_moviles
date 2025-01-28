@@ -34,12 +34,13 @@ body {
 }
 
 #bici {
+  position: absolute;
   bottom: -25px;
   left: 350px;
   z-index: 1;
-  animation: moveBike 5s linear infinite;
+  animation: moveBike 5s linear infinite; /* Movimiento continuo */
+  transform-origin: center; /* Inicialmente en el centro */
 }
-
 #arbol {
   right: 80px;
   bottom: -4px;
@@ -49,7 +50,10 @@ body {
 #nube {
   top: 50px;
   left: 0;
-  animation: moveCloud 8s linear infinite;
+}
+
+#nube.move-away{
+  animation: moveCloudAway 2s forwards;
 }
 
 #input-container {
@@ -68,20 +72,103 @@ body {
   color: red;
 }
 
+#lluvia1 {
+  width: 150px; 
+  height: auto;
+  right: 600px;
+  bottom: 800px;
+}
+
+#lluvia2 {
+  width: 150px; 
+  height: auto;
+  right: 100px;
+  bottom: 1050px;
+}
+
+#lluvia3 {
+  width: 150px; 
+  height: auto;
+  right: 350px;
+  bottom: 950px;
+}
+
+/* Clases para activar las animaciones */
+#sol.move-down {
+  animation: moveSunDown 2s forwards;
+}
+
+#nevado.move-left {
+  animation: moveNevadoLeft 2s forwards;
+}
+
+#nevado2.move-right {
+  animation: moveNevadoRight 2s forwards;
+}
+
+#lluvia1.move-down{
+  animation: moveRain1 2s forwards;
+}
+
+#lluvia2.move-down{
+  animation: moveRain2 2s forwards;
+}
+
+#lluvia3.move-down{
+  animation: moveRain3 2s forwards;
+}
+
+
+/* Nuevas animaciones */
+@keyframes moveSunDown {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(500px); }
+}
+
+@keyframes moveNevadoLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-500px); }
+}
+
+@keyframes moveNevadoRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(500px); }
+}
+
 @keyframes rotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
 @keyframes moveBike {
-  0% { transform: translateX(-500px); }
-  100% { transform: translateX(500px); }
+  0% {
+    transform: translateX(-500px);
+  } 
+  100% {
+    transform: translateX(500px);
+  }
 }
 
-@keyframes moveCloud {
-  0% { transform: translateX(-100px); }
+@keyframes moveCloudAway {
+  0% { transform: translateX(0); }
   100% { transform: translateX(900px); }
 }
+
+@keyframes moveRain1 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(500px); }
+}
+
+@keyframes moveRain2 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(700px); }
+}
+
+@keyframes moveRain3 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(800px); }
+}
+
 
 @keyframes spinBike {
   0% {
