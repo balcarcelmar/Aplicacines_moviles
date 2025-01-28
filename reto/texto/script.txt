@@ -1,0 +1,31 @@
+---- PARTE DEL HTML ----
+
+<!--texto-->
+  <div id="input-container">
+    <label for="text-input">Escribe algo:</label>
+    <input type="text" id="text-input" placeholder="Escribe aquí...">
+    <span id="char-count">0</span>
+  </div>
+
+
+---- PARTE DEL CSS ----
+/* texto*/
+#input-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#text-input {
+  padding: 5px;
+  font-size: 16px;
+  width: 300px;
+}
+
+
+---- PARTE DEL JS ----
+// Contador de caracteres
+const textInput = document.getElementById("text-input");
+const charCount = document.getElementById("char-count");
+textInput.addEventListener("input", () => {
+  charCount.textContent = textInput.value.length;
+});
