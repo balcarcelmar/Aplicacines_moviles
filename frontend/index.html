@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BASIC/DEPT® Clone</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Header Design</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Barra de navegación -->
-    <nav class="navbar">
-        <div class="logo">BASIC/DEPT®</div>
-        <ul class="nav-links">
-            <li><a href="#">Work</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Thinking</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <header class="header">
+        <div class="logo">
+            <a href="#">BASIC/DEPT<sup>&reg;</sup></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Work</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Thinking</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu">MENU</div>
+    </header>
 
 <!-- Video -->
-    <section class="section-video">
-        <video autoplay muted loop class="video">
+    <section class="video-container">
+        <video autoplay muted loop >
             <source src="https://cdn.sanity.io/files/8nn8fua5/production/c6fb986a862cbe643c40cbdd0318ebc495efb187.mp4" type="video/mp4">
         </video>
 
+<!--
         <ul class="intro">
             <li>
                 <figure></figure>
@@ -41,53 +46,88 @@
             </li>
         </ul>
     </section>
+-->
 
-<!-- BASIC/DEPT -->
-    <section class="section-basic-dept">
-        <div class="basic-dept">
-            <div class="content">
-                <h3>
-                    <p>
-                        BASIC/DEPT® is a global branding and digital design agency building products, 
-                        services, and eCommerce experiences that turn cultural values into company value.
-                    </p>
-                </h3>
-                <p>
-                    <a href="#">
-                        SEE THE WORK
-                    </a>
-                </p>
-            </div>
-            <figure></figure>
-        </div>
-    </section>
 
 <!-- Marcas -->
-    <section class="brands">
-        <ul>
-            <li><!-- PATAGONIA -->
-                <div></div>
-                <div>
-                    <h5>PATAGONIA</h5>
-                    <p>An eCommerce experience driven by Patagonia’s brand mission</p>
-                </div>
-            </li>
-            <li><!-- WILSON -->
-                <div></div>
-                <div>
-                    <h5>WILSON</h5>
-                    <p>A century-old sports brand finding its place in culture</p>
-                </div>
-            </li>
-            <li><!-- GOOGLE -->
-                <div></div>
-                <div>
-                    <h5>GOOGLE STORE</h5>
-                    <p>An eCommerce experience helping Google bring its hardware to people across the globe</p>
-                </div>
-            </li>
-        </ul>
-    </section>
+<section class="brands">
+    <ul>
+        <li>
+            <div class="logo-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/AdAge_logo.svg/2560px-AdAge_logo.svg.png" alt="Logo 1">
+            </div>
+            <div>
+                <p><a href="https://enlace-logo1.com">DESIGN AND BRANDING AGENCY OF THE YEAR</a></p>
+            </div>
+        </li>
+        <li>
+            <div class="logo-image-dos">
+                <img src="https://seeklogo.com/images/T/the-webby-awards-logo-764BE46F1F-seeklogo.com.png" alt="Logo 1">
+            </div>
+            <div>
+                <p><a href="https://enlace-logo2.com">AGENCY OF THE YEAR</a></p>
+            </div>
+        </li>
+        <li>
+            <div class="logo-image-tres">
+                <img src="https://www.annalect.com/wp-content/uploads/2015/03/campaign_us_logo.png" alt="Logo 1">
+            </div>
+            <div>
+                <p><a href="https://enlace-logo3.com">DIGITAL INNOVATION AGENCY OF THE YEAR FINALIST</a></p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<!-- BASIC/DEPT -->
+<section class="section-basic-dept">
+    <div class="basic-dept">
+        <div class="content">
+            <h3>
+                <p>
+                    BASIC/DEPT® is a global branding and digital design agency building products, 
+                    services, and eCommerce experiences that turn cultural values into company value.
+                </p>
+            </h3>
+            <p>
+                <a href="#" class="btn">
+                    SEE THE WORK
+                </a>
+            </p>
+        </div>
+        <figure class="logo-container">
+            <img src="https://d3q27bh1u24u2o.cloudfront.net/company_office/Basic_-_Aligned_Logo_-_Black.png" alt="BASIC/DEPT Logo">
+        </figure>
+    </div>
+</section>
+
+
+<!-- patagonia, wilson y google-->
+<section class="brands">
+    <ul>
+        <li><!-- PATAGONIA -->
+            <div></div>
+            <div>
+                <h5>PATAGONIA</h5>
+                <p>An eCommerce experience driven by Patagonia’s brand mission</p>
+            </div>
+        </li>
+        <li><!-- WILSON -->
+            <div></div>
+            <div>
+                <h5>WILSON</h5>
+                <p>A century-old sports brand finding its place in culture</p>
+            </div>
+        </li>
+        <li><!-- GOOGLE -->
+            <div></div>
+            <div>
+                <h5>GOOGLE STORE</h5>
+                <p>An eCommerce experience helping Google bring its hardware to people across the globe</p>
+            </div>
+        </li>
+    </ul>
+</section>
 
 
 <!-- Featured Engagements -->
