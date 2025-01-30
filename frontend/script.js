@@ -1,23 +1,38 @@
-// Cambiar el cursor al pasar sobre el video
-const hero = document.querySelector('.hero');
-const watchReel = document.querySelector('.watch-reel');
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.carousel ul');
+    const customCursor = document.querySelector('.custom-cursor');
+    let isDragging = false;
+    let startX, scrollLeft;
 
-hero.addEventListener('mousemove', (e) => {
-    watchReel.style.left = `${e.clientX}px`;
-    watchReel.style.top = `${e.clientY}px`;
-});
+    // Deslizamiento con el mouse
+    carousel.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+        customCursor.style.backgroundColor = 'hotpink'; // Cambiar color al arrastrar
+    });
 
-// Cambio de fondo dinámico
-const dynamicSection = document.querySelector('.dynamic-section');
+    carousel.addEventListener('mouseleave', () => {
+        isDragging = false;
+        customCursor.style.backgroundColor = 'pink'; // Restaurar color
+    });
 
-window.addEventListener('scroll', () => {
-    const sectionTop = dynamicSection.offsetTop;
-    const sectionHeight = dynamicSection.offsetHeight;
-    const scrollPos = window.scrollY + window.innerHeight;
+    carousel.addEventListener('mouseup', () => {
+        isDragging = false;
+        customCursor.style.backgroundColor = 'pink'; // Restaurar color
+    });
 
-    if (scrollPos > sectionTop && scrollPos < sectionTop + sectionHeight) {
-        document.body.style.backgroundColor = '#252422';
-    } else {
-    document.body.style.backgroundColor = '#f4f4f4';
-    }
+    carousel.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 2; // Ajusta la velocidad del deslizamiento
+        carousel.scrollLeft = scrollLeft - walk;
+    });
+
+    // Mover el cursor personalizado
+    document.addEventListener('mousemove', (e) => {
+        customCursor.style.left = `${e.pageX}px`;
+        customCursor.style.top = `${e.pageY}px`;
+    });
 });

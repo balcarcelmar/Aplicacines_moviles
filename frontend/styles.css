@@ -269,3 +269,314 @@ body {
     margin-top: 1rem;
     font-size: 1rem;
 }
+
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.featured {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: left;
+    width: 100%;
+    position: relative;
+}
+
+.featured h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+    padding-left: 40px;
+}
+
+/* Contenedor del carrusel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Lista de clientes en el carrusel */
+.carousel ul {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 40px; /* Espacio entre elementos */
+    padding-left: 40px;
+}
+
+.carousel li.clients {
+    flex: 0 0 30%; /* Tres elementos visibles */
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.carousel li.clients h5 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.carousel li.clients p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.carousel li.clients a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.carousel li.clients a:hover {
+    text-decoration: underline;
+}
+
+/* Cursor personalizado */
+.custom-cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: pink;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none; /* Oculto por defecto */
+}
+
+.featured:hover .custom-cursor {
+    display: block; /* Mostrar al entrar en la sección */
+}
+
+
+
+
+
+
+/* Estilos generales NOTICIAS*/
+/* Estilos generales */
+.news {
+    padding: 40px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.news h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.news a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news a:hover {
+    text-decoration: underline;
+}
+
+.news ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.news li {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news li a {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+}
+
+.news li div:first-child {
+    flex: 0 0 40%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.news li div:last-child {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.news li h5 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.news li span {
+    display: block;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.news li figure {
+    margin: 0;
+}
+
+.news li figure img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+
+/* Estilos generales del footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #333;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-info figure {
+    margin: 0;
+}
+
+.footer-info p {
+    font-size: 16px;
+    color: #ccc;
+    margin: 0;
+}
+
+.footer-info a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-info h6 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-footer {
+    margin-bottom: 20px;
+}
+
+.footer-footer input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;
+    background-color: #000;
+    color: #fff;
+    width: 200px;
+}
+
+.footer-footer button {
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-footer button:hover {
+    background-color: #555;
+}
+
+.footer-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer-footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-copy span {
+    margin-right: 20px;
+}
+
+.footer-copy a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-copy a:hover {
+    text-decoration: underline;
+}
