@@ -364,7 +364,7 @@ body {
 
 
 /* Estilos del título */
-.content h3 p {
+.content-two h3 p {
     font-size: 9rem;
     font-weight: bold;
     line-height: 1.5;
@@ -374,12 +374,12 @@ body {
 }
 
 
-.content p {
+.content-two p {
     margin-top: 1rem;
     font-size: 2rem;
 }
 
-.content span {
+.content-two span {
     font-size: 2rem;
     color: #f9CDcd;
 }
@@ -580,9 +580,10 @@ img {
 /* Estilos generales */
 .news {
     padding: 40px;
-    background-color: #fff;
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: transparent;
+    max-width: 100%;
+    padding: 20rem 6rem 0rem 6rem;
+    gap: 4rem;
 }
 
 .news > div {
@@ -590,6 +591,7 @@ img {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    border-bottom: 1px solid #000; /* Línea divisoria */
 }
 
 .news h2 {
@@ -598,10 +600,22 @@ img {
     color: #333;
 }
 
-.news a {
-    color: #0073e6;
+/* Botón estilizado */
+.btn-three {
+    display: inline-block;
+    padding: 0.6rem 2.2rem;
+    border: 1px solid #000;
+    border-radius: 50px;
     text-decoration: none;
+    font-size: 0.9rem;
     font-weight: bold;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-three:hover {
+    background-color: #000;
+    color: #fff;
 }
 
 .news a:hover {
@@ -614,12 +628,13 @@ img {
     list-style: none;
 }
 
+/*Contenedor de cada noticia*/
 .news li {
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+    padding: 0rem 0rem 10rem 0rem;
+    height: 45rem;
+    background-color: transparent;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #000; /* Línea divisoria */
 }
 
 .news li a {
@@ -637,19 +652,30 @@ img {
 
 .news li div:last-child {
     flex: 1;
-    padding: 20px;
+    padding: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .news li h5 {
-    font-size: 24px;
+    font-size: 45px;
     font-weight: bold;
     margin-bottom: 10px;
     color: #000;
+    width: 50%;
 }
 
+.news h2 {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+    width: 10%;
+}
+
+
+/*Estilo de la fecha*/
 .news li span {
     display: block;
     font-size: 16px;
@@ -657,17 +683,10 @@ img {
     margin-bottom: 10px;
 }
 
-.news li figure {
-    margin: 0;
+.news-image img{
+    width: 80%;
+    height: auto;
 }
-
-.news li figure img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-
 
 /* Estilos generales del footer */
 footer {
