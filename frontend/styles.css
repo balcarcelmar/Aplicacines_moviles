@@ -106,41 +106,45 @@ body {
 
 
 /* Estilo para la sección de marcas */
+ /* Contenedor de marcas */
 .brands {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 7rem 10rem 8em 10rem;
-    background-color: transparent
+    padding: 20rem 0rem 18rem 25rem; /* Reduce el padding en pantallas pequeñas */
+    width: 100%;
+    background-color: transparent;
 }
 
+/* Lista de marcas */
 .brands ul {
     display: flex;
-    justify-content: space-between;
-    gap: 12rem;
-    max-width: 1200px;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas */
+    gap: 35em; /* Espaciado entre elementos */
     width: 100%;
+    padding: 0;
 }
 
+/* Elementos de la lista */
 .brands li {
-    flex: 1;
     text-align: center;
     list-style: none;
+    width: 200px;
 }
 
 /* Estilo de los logos: (adage, twa, campaign) */
 .logo-image img {
-    width: 180px; 
+    width: 400px; 
     height: auto;
     transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); /* Animación fluida */
 }
 .logo-image-dos img {
-    width: 140px; 
+    width: 300px; 
     height: auto;
     transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); /* Animación fluida */
 }
 .logo-image-tres img {
-    width: 160px; 
+    width: 300px; 
     height: auto;
     transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); /* Animación fluida */
 }
@@ -162,13 +166,13 @@ body {
 
 /* Estilo del contenedor */
 .brands p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #1f1f1f;
-    margin-top: 4rem;
+    margin-top: 10rem;
 }
 /* Estilo del texto*/
 .brands p a {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #1f1f1f;
     text-decoration: none;
 }
@@ -183,10 +187,10 @@ body {
 /* Estilo general de basic/dept (lo que esta debajo de adage, twa, campaign) */
 .section-basic-dept {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 4rem 6rem;
-    background-color: #f4f4f4;
+    padding: 4rem 6rem 0rem 6rem;
+    width: 100vw;
+    background-color: transparent;
 }
 
 
@@ -195,8 +199,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10rem; /* Espaciado entre el logo y el texto */
-    max-width: 1200px;
-    width: 100%;
+    width: 100vw;
     border-top: 1px solid #000; /* Línea divisoria */
     padding: 4rem 0rem;
 }
@@ -209,21 +212,21 @@ body {
 }
 
 .logo-container img {
-    width: 500px; /* Tamaño del logo */
+    width: 1000px; /* Tamaño del logo */
     height: auto;
 }
 
 /* Contenedor de contenido */
 .content {
-    flex: 2; /* Hace que el texto ocupe más espacio */
+    flex: 1; /* Hace que el texto ocupe más espacio */
     text-align: left;
 }
 
 /* Estilo del texto principal */
 .content h3 p {
-    font-size: 2rem; /* Aumenta el tamaño del texto */
+    font-size: 3rem; /* Aumenta el tamaño del texto */
     font-weight: bold;
-    color: #000;
+    color: #272727;
     line-height: 1.5;
 }
 
@@ -235,11 +238,11 @@ body {
 /* Botón estilizado */
 .btn {
     display: inline-block;
-    padding: 0.5rem 2rem;
+    padding: 0.6rem 2.2rem;
     border: 1px solid #000;
     border-radius: 50px;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
     color: #000;
     transition: all 0.3s ease-in-out;
@@ -249,6 +252,100 @@ body {
     background-color: #000;
     color: #fff;
 }
+
+/* Ajuste general de la sección */
+.brands-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
+    width: 100%;
+    background-color: transparent;
+}
+
+/* Lista de marcas */
+.brands-two ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    width: 100%;
+    padding: 0;
+}
+
+/* Estilo de patagonia, wilson y google store */
+/* Estilo del contenedor */
+.brands-two {
+    display: block;
+    align-items: center;
+    padding: 6rem 6rem 6rem; /* Reduce el padding en pantallas pequeñas */
+    width: 100%;
+    background-color: transparent;
+}
+
+/* Elementos de la lista */
+.brands-two li {
+    text-align: left;
+    list-style: none;
+    font-size: 2rem;
+    width: 30%;
+}
+/* Letra p */
+
+.brands-two p {
+    text-align: left;
+    list-style: none;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    width: 60%;
+}
+
+/* Ajustes para las imágenes y videos */
+.brands-two li div:first-child {
+    /*espacio entre las imagenes y el texto*/
+    margin-bottom: 2rem;
+}
+
+/* Estilo para imágenes */
+.brands-two li img {
+    width: 750px; /* Tamaño del logo */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilo para el video */
+.brands-two li video {
+    width: 750px; /* Tamaño del video */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover en imágenes y video */
+.brands-two li img:hover,
+.brands-two li video:hover {
+    transform: scale(1.1); /* Agranda la imagen/video al pasar el mouse */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .brands-two {
+        padding: 3rem 2rem;
+    }
+
+    .brands-two ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .brands-two li {
+        width: 100%;
+    }
+}
+
+
+
+
+
 
 
 
