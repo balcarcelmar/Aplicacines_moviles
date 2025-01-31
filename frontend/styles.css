@@ -269,7 +269,8 @@ body {
     flex-wrap: wrap;
     gap: 5rem;
     width: 100%;
-    padding: 0;
+    padding: 0rem 0rem 20rem 0rem;
+    border-bottom: 1px solid #000; /* Línea divisoria */
 }
 
 /* Estilo de patagonia, wilson y google store */
@@ -290,7 +291,6 @@ body {
     width: 30%;
 }
 /* Letra p */
-
 .brands-two p {
     text-align: left;
     list-style: none;
@@ -317,6 +317,7 @@ body {
     width: 750px; /* Tamaño del video */
     height: auto;
     transition: transform 0.3s ease-in-out;
+    padding-top: 5rem;
 }
 
 /* Efecto hover en imágenes y video */
@@ -342,53 +343,115 @@ body {
     }
 }
 
-
-
-
-
-
-
-
+/* Estilos de la sección dinámica (debe cambiar de color)*/
 .dynamic-section {
-    height: 100vh;
+    height: 120vh;
     background-color: #252422;
     color: #fff;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    margin-top: 300px;
+    padding: 3rem 3rem 0rem 6rem;
 }
 
-.content h2 {
-    font-size: 2rem;
+/* Estructura de la sección */
+.dynamic-row {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 11rem; /* Espacio entre el texto y el video */
 }
+
+
+/* Estilos del título */
+.content h3 p {
+    font-size: 9rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #f9CDCD;
+    line-height: 1;
+
+}
+
 
 .content p {
     margin-top: 1rem;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
+.content span {
+    font-size: 2rem;
+    color: #f9CDcd;
+}
 
-/* Estilos generales */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
 
+/* Estilo del video */
+.dynamic-row video {
+    width: 1000px;
+    height: auto;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+    .dynamic-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .dynamic-row div:last-child {
+        justify-content: center;
+    }
+
+    .dynamic-row video {
+        max-width: 80%;
+    }
+}
+
+/* Botón estilizado */
+.btn-two {
+    display: inline-block;
+    padding: 0.7rem 2.3rem;
+    border: 1px solid #f9CDcd;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f9CDcd;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-two:hover {
+    background-color: #f9cdcd;
+    color: #000000;
+}
+
+/*AQUI EL DRAG */
+/* Estilos generales */
+
+
 .featured {
-    padding: 40px;
-    background-color: #f9f9f9;
+    padding: 2rem 0rem 0rem 3rem;
+    background-color: transparent;
     text-align: left;
     width: 100%;
     position: relative;
+
 }
 
+/*titulo*/
 .featured h2 {
-    font-size: 28px;
+    font-size: 80px;
     font-weight: bold;
     margin-bottom: 30px;
     color: #333;
-    padding-left: 40px;
+    padding-left: 3.5rem;
+    width: 20%;
 }
 
 /* Contenedor del carrusel */
@@ -398,24 +461,75 @@ body {
     width: 100%;
 }
 
+
+/* Estilos de las imágenes */
+.image-container-one,
+.image-container-three,
+img {
+    width: 150px;
+    height: auto;
+    padding: 5rem 0rem 10rem 0rem;
+    transition: transform 0.3s ease-in-out;
+
+}
+.image-container-two,
+img {
+    width: 150px;
+    height: auto;
+    padding: 3rem 0rem 6rem 0rem;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.image-container-four,
+.image-container-five,
+img {
+    width: 150px;
+    height: auto;
+    padding: 5rem 0rem 3rem 0rem;
+    transition: transform 0.3s ease-in-out;
+
+}
+/* Efecto hover en la imagen */
+.image-container-one,
+.image-container-two,
+.image-container-three,
+.image-container-four,
+.image-container-five,
+ img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .carousel ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .clients {
+        width: 100%;
+    }
+}
+
 /* Lista de clientes en el carrusel */
 .carousel ul {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    padding: 0;
+    padding: 0rem;
     margin: 0;
     list-style: none;
     gap: 40px; /* Espacio entre elementos */
     padding-left: 40px;
+    border-bottom: 1px solid #000; /* Línea divisoria */
 }
 
 .carousel li.clients {
     flex: 0 0 30%; /* Tres elementos visibles */
     box-sizing: border-box;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
     text-align: left;
 }
 
@@ -427,10 +541,10 @@ body {
 }
 
 .carousel li.clients p {
-    font-size: 16px;
+    font-size: 20px;
     color: #666;
     line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 100px;
 }
 
 .carousel li.clients a {
@@ -459,9 +573,6 @@ body {
 .featured:hover .custom-cursor {
     display: block; /* Mostrar al entrar en la sección */
 }
-
-
-
 
 
 
