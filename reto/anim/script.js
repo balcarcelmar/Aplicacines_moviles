@@ -1,7 +1,7 @@
 // Reproducir música de fondo
 const backgroundMusic = document.getElementById("background-music");
 backgroundMusic.volume = 1; // Ajustar volumen
-backgroundMusic.stop();
+backgroundMusic.play();
 
 // Contador de caracteres
 const textInput = document.getElementById("text-input");
